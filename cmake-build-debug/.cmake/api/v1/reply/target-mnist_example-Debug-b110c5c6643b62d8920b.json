@@ -12,7 +12,6 @@
 		[
 			"add_executable",
 			"target_link_libraries",
-			"target_compile_definitions",
 			"target_compile_features"
 		],
 		"files" : 
@@ -39,12 +38,6 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 7,
-				"parent" : 0
-			},
-			{
-				"command" : 3,
-				"file" : 0,
 				"line" : 4,
 				"parent" : 0
 			}
@@ -65,7 +58,7 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 2,
 					"define" : "MNIST_DATA_LOCATION=\"/home/noname/Workspace/mnist_loader\""
 				}
 			],
@@ -81,7 +74,7 @@
 			{
 				"backtraces" : 
 				[
-					4
+					3
 				],
 				"standard" : "17"
 			},
