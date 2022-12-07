@@ -100,6 +100,6 @@ void normalize_dataset(Dataset& dataset) {
     mnist::normalize_each(dataset.test_images);
 }
 
-} //end of namespace mnist
+} //end of namespace mnist_loader
 
 #endif

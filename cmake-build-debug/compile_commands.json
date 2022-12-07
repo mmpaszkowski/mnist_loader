@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/noname/Workspace/mnist_loader/cmake-build-debug",
+  "command": "/usr/bin/c++ -DMNIST_DATA_LOCATION=\\\"/home/noname/Workspace/mnist_loader\\\" -I/home/noname/Workspace/mnist_loader/include/. -g -fdiagnostics-color=always -std=c++17 -o example/CMakeFiles/mnist_example.dir/main.cpp.o -c /home/noname/Workspace/mnist_loader/example/main.cpp",
+  "file": "/home/noname/Workspace/mnist_loader/example/main.cpp"
+}
+]

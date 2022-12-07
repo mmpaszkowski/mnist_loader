@@ -6,8 +6,7 @@
 //=======================================================================
 
 #include <iostream>
-#include "mnist/mnist_reader.hpp"
-
+#include <mnist_loader/mnist_reader.hpp>
 int main(int argc, char* argv[]) {
     // MNIST_DATA_LOCATION set by MNIST cmake config
     std::cout << "MNIST data directory: " << MNIST_DATA_LOCATION << std::endl;

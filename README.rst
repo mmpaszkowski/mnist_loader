@@ -56,4 +56,4 @@ License
 The header files are distributed under the terms of the MIT License. The MNIST
 files are not my property. If used in a paper, you'll need to cite the reference
 paper, as indicated in the `official website
-<http://yann.lecun.com/exdb/mnist/>`_.
+<http://yann.lecun.com/exdb/mnist_loader/>`_.

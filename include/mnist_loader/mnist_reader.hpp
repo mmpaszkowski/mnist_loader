@@ -25,7 +25,7 @@
 namespace mnist {
 
 /*!
- * \brief Represents a complete mnist dataset
+ * \brief Represents a complete mnist_loader dataset
  * \tparam Container The container to use
  * \tparam Image The type of image
  * \tparam Label The type of label
@@ -247,7 +247,7 @@ bool read_mnist_label_file_categorical(Container& labels, const std::string& pat
 /*!
  * \brief Read all training images and return a container filled with the images.
  *
- * The dataset is assumed to be in a mnist subfolder
+ * The dataset is assumed to be in a mnist_loader subfolder
  *
  * \param limit The maximum number of elements to read (0: no limit)
  * \param func The functor to create the image objects.
@@ -263,7 +263,7 @@ Container<Image> read_training_images(const std::string& folder, std::size_t lim
 /*!
  * \brief Read all test images and return a container filled with the images.
  *
- * The dataset is assumed to be in a mnist subfolder
+ * The dataset is assumed to be in a mnist_loader subfolder
  *
  * \param limit The maximum number of elements to read (0: no limit)
  * \param func The functor to create the image objects.
@@ -279,7 +279,7 @@ Container<Image> read_test_images(const std::string& folder, std::size_t limit, 
 /*!
  * \brief Read all training label and return a container filled with the labels.
  *
- * The dataset is assumed to be in a mnist subfolder
+ * The dataset is assumed to be in a mnist_loader subfolder
  *
  * \param limit The maximum number of elements to read (0: no limit)
  * \return Container filled with the labels
@@ -294,7 +294,7 @@ Container<Label> read_training_labels(const std::string& folder, std::size_t lim
 /*!
  * \brief Read all test label and return a container filled with the labels.
  *
- * The dataset is assumed to be in a mnist subfolder
+ * The dataset is assumed to be in a mnist_loader subfolder
  *
  * \param limit The maximum number of elements to read (0: no limit)
  * \return Container filled with the labels
@@ -309,7 +309,7 @@ Container<Label> read_test_labels(const std::string& folder, std::size_t limit) 
 /*!
  * \brief Read dataset and assume images in 3D (1x28x28)
  *
- * The dataset is assumed to be in a mnist subfolder
+ * The dataset is assumed to be in a mnist_loader subfolder
  *
  * \param training_limit The maximum number of elements to read from training set (0: no limit)
  * \param test_limit The maximum number of elements to read from test set (0: no limit)
@@ -331,7 +331,7 @@ MNIST_dataset<Container, Image, Label> read_dataset_3d(const std::string& folder
 /*!
  * \brief Read dataset and assume images in 3D (1x28x28)
  *
- * The dataset is assumed to be in a mnist subfolder
+ * The dataset is assumed to be in a mnist_loader subfolder
  *
  * \param training_limit The maximum number of elements to read from training set (0: no limit)
  * \param test_limit The maximum number of elements to read from test set (0: no limit)
@@ -339,7 +339,7 @@ MNIST_dataset<Container, Image, Label> read_dataset_3d(const std::string& folder
  */
 template <template <typename...> class Container, typename Image, typename Label = uint8_t>
 MNIST_dataset<Container, Image, Label> read_dataset_3d(std::size_t training_limit = 0, std::size_t test_limit = 0) {
-    return read_dataset_3d<Container, Image, Label>("mnist", training_limit, test_limit);;
+    return read_dataset_3d<Container, Image, Label>("mnist_loader", training_limit, test_limit);;
 }
 
 /*!
@@ -365,7 +365,7 @@ MNIST_dataset<Container, Image, Label> read_dataset_direct(const std::string& fo
 /*!
  * \brief Read dataset.
  *
- * The dataset is assumed to be in a mnist subfolder
+ * The dataset is assumed to be in a mnist_loader subfolder
  *
  * \param training_limit The maximum number of elements to read from training set (0: no limit)
  * \param test_limit The maximum number of elements to read from test set (0: no limit)
@@ -373,13 +373,13 @@ MNIST_dataset<Container, Image, Label> read_dataset_direct(const std::string& fo
  */
 template <template <typename...> class Container, typename Image, typename Label = uint8_t>
 MNIST_dataset<Container, Image, Label> read_dataset_direct(std::size_t training_limit = 0, std::size_t test_limit = 0) {
-    return read_dataset_direct<Container, Image, Label>("mnist", training_limit, test_limit);
+    return read_dataset_direct<Container, Image, Label>("mnist_loader", training_limit, test_limit);
 }
 
 /*!
  * \brief Read dataset.
  *
- * The dataset is assumed to be in a mnist subfolder
+ * The dataset is assumed to be in a mnist_loader subfolder
  *
  * \param training_limit The maximum number of elements to read from training set (0: no limit)
  * \param test_limit The maximum number of elements to read from test set (0: no limit)
@@ -402,6 +402,6 @@ MNIST_dataset<Container, Sub<Pixel>, Label> read_dataset(const std::string& fold
     return read_dataset_direct<Container, Sub<Pixel>>(folder, training_limit, test_limit);
 }
 
-} //end of namespace mnist
+} //end of namespace mnist_loader
 
 #endif

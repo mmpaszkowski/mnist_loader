@@ -1,0 +1,4 @@
+# ninja log v5
+0	4	1670441042725105073	include/libmnist_loader.a	cf638297eb75332d
+0	627	1670441212133305965	example/CMakeFiles/mnist_example.dir/main.cpp.o	725e10e6c80a0bfe
+628	688	1670441212193306037	example/mnist_example	606e76db69d1132e

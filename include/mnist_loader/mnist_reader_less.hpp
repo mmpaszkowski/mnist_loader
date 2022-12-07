@@ -27,7 +27,7 @@
 namespace mnist {
 
 /*!
- * \brief Represents a complete mnist dataset
+ * \brief Represents a complete mnist_loader dataset
  * \tparam Pixel The type of a pixel
  * \tparam Label The type of a label
  */
@@ -109,55 +109,55 @@ std::vector<Label> read_mnist_label_file(const std::string& path) {
 /*!
  * \brief Read all training images and return a container filled with the images.
  *
- * The dataset is assumed to be in a mnist subfolder
+ * The dataset is assumed to be in a mnist_loader subfolder
  *
  * \return Container filled with the images
  */
 template <typename Pixel = uint8_t>
 std::vector<std::vector<Pixel>> read_training_images() {
-    return read_mnist_image_file<Pixel>("mnist/train-images-idx3-ubyte");
+    return read_mnist_image_file<Pixel>("mnist_loader/train-images-idx3-ubyte");
 }
 
 /*!
  * \brief Read all test images and return a container filled with the images.
  *
- * The dataset is assumed to be in a mnist subfolder
+ * The dataset is assumed to be in a mnist_loader subfolder
  *
  * \return Container filled with the images
  */
 template <typename Pixel = uint8_t>
 std::vector<std::vector<Pixel>> read_test_images() {
-    return read_mnist_image_file<Pixel>("mnist/t10k-images-idx3-ubyte");
+    return read_mnist_image_file<Pixel>("mnist_loader/t10k-images-idx3-ubyte");
 }
 
 /*!
  * \brief Read all training labels and return a container filled with the labels.
  *
- * The dataset is assumed to be in a mnist subfolder
+ * The dataset is assumed to be in a mnist_loader subfolder
  *
  * \return Container filled with the labels
  */
 template <typename Label = uint8_t>
 std::vector<Label> read_training_labels() {
-    return read_mnist_label_file<Label>("mnist/train-labels-idx1-ubyte");
+    return read_mnist_label_file<Label>("mnist_loader/train-labels-idx1-ubyte");
 }
 
 /*!
  * \brief Read all test labels and return a container filled with the labels.
  *
- * The dataset is assumed to be in a mnist subfolder
+ * The dataset is assumed to be in a mnist_loader subfolder
  *
  * \return Container filled with the labels
  */
 template <typename Label = uint8_t>
 std::vector<Label> read_test_labels() {
-    return read_mnist_label_file<Label>("mnist/t10k-labels-idx1-ubyte");
+    return read_mnist_label_file<Label>("mnist_loader/t10k-labels-idx1-ubyte");
 }
 
 /*!
  * \brief Read dataset.
  *
- * The dataset is assumed to be in a mnist subfolder
+ * The dataset is assumed to be in a mnist_loader subfolder
  *
  * \return The dataset
  */
@@ -174,6 +174,6 @@ MNIST_dataset<Pixel, Label> read_dataset() {
     return dataset;
 }
 
-} //end of namespace mnist
+} //end of namespace mnist_loader
 
 #endif

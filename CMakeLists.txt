@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.16)
+
+# PROJECT
+project(mnist_loader VERSION 0.0.1 LANGUAGES CXX)
+
+set(MNIST_INCLUDE_DIR ${CMAKE_CURRENT_LIST_DIR}/include)
+set(MNIST_DATA_DIR ${CMAKE_CURRENT_LIST_DIR})
+
+# GLOBAL CMAKE VARIABLES
+set(CMAKE_CXX_STANDARD              17)
+set(CMAKE_CXX_STANDARD_REQUIRED     ON)
+set(CMAKE_CXX_EXTENSIONS            OFF)
+set(CMAKE_EXPORT_COMPILE_COMMANDS   ON)
+
+# SUBDIRECTORIES
+add_subdirectory(include)
+add_subdirectory(example)

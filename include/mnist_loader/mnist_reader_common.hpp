@@ -19,7 +19,7 @@ namespace mnist {
  * \brief Extract the MNIST header from the given buffer
  * \param buffer The current buffer
  * \param position The current reading positoin
- * \return The value of the mnist header
+ * \return The value of the mnist_loader header
  */
 inline uint32_t read_header(const std::unique_ptr<char[]>& buffer, size_t position) {
     auto header = reinterpret_cast<uint32_t*>(buffer.get());
@@ -77,6 +77,6 @@ inline std::unique_ptr<char[]> read_mnist_file(const std::string& path, uint32_t
     return buffer;
 }
 
-} //end of namespace mnist
+} //end of namespace mnist_loader
 
 #endif
